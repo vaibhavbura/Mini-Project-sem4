@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Career Catalyst</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1 class="text-center my-2">Career Catalyst</h1>
+    <p class="text-center">Instant resume generator</p>
+    <div class="row">
+        <div class="col-md-4">
+            
+            <form method="POST">
+                <h3>Personal Details</h3>
+                <label for="">First Name</label>
+                <input type="text" placeholder="Enter here" name="fname required">
+                <label for="">Last Name</label>
+                <input type="text" placeholder="Enter here" name="lname" required>
+                <label for="">Address</label>
+                <textarea name="add" id="contactfield" cols="40" rows="10" placeholder="Enter here"></textarea>
+                <label for="">Nationality</label>
+                <input type="text" placeholder="Enter here" name="nation" required>
+                <label for="">Date Of Birth</label>
+                <input type="date"  name="dob" required>
+                <label for="">Contact</label>
+                <input type="tel" placeholder="Enter here" name="contact" required>
+                <label for="">Email</label>
+                <input type="email" placeholder="Enter here" name="gmail" required>
+              </form>
+        </div>
+        <div class="col-md-4">
+            <form method="POST">
+            <h3>Skills</h3>
+            <input type="text" placeholder="Enter here" name="skill1" required>
+            <input type="text" placeholder="Enter here" name="skill2" required><br>
+            <input type="text" placeholder="Enter here" name="skill3" required>
+            <input type="text" placeholder="Enter here" name="skill4" required><br><br>
+            <h3>Work Experience</h3>
+            <label for="">Company Name</label>
+            <input type="text" placeholder="Enter here" name="cname" required>
+            <label for="">Designation</label>
+            <input type="text" placeholder="Enter here" name="designation" required>  
+            <label for="">Duration</label>
+            <input type="text" placeholder="Enter here" name="duration" required>
+       
+            <br><br>
+            <h3>Qualification</h3>
+            <label for="">SSC</label>
+            <input type="text" placeholder="School Name" name="ssc_name" required>
+            <input type="text" placeholder="Qualifying Percentage" name="ssc_marks" required>
+            <label for="">HSC</label>
+            <input type="text" placeholder="College Name" name="hsc_name" required>
+            <input type="text" placeholder="Qualifying Percentage" name="hsc_marks" required>
+            <label for="">Higher Studies</label>
+            <input type="text" placeholder="Institute Name" name="institute_name" required>
+            <input type="text" placeholder="Qualifying Percentage" name="institute_marks" required>
+        </form>
+
+
+        </div>
+        <div class="col-md-4">
+            <h3>Templates</h3>
+        </div>
+    </div>
+   
+        
+    
+    </div>
+
+    <script>src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"</script>
+    <script src="suggestions.js"></script> 
+     <script src="script.js"></script> 
+</body>
+</html>

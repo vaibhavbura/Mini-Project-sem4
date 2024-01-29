@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(247, 240, 247);
+}
+
+form label{
+    display: flex;
+    margin-top: 8px;
+    font-size: 18px;
+    }
+    
+    form{
+        width: 300px;
+        margin-left: 20px;
+    }
+    
+    form input{
+        padding: 4px;
+        width: 100%;
+        border: none;
+        border: 1px solid grey;
+        border-radius: 3px;
+        outline: none;
+    }
+
+    
