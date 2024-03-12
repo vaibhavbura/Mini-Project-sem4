@@ -1,3 +1,15 @@
+<?php
+session_start();
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +32,7 @@
 		crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="css/index.css">
-	<link rel="icon" href="images/RB_Logo.png" type="image/x-icon">
+	<link rel="icon" href="images/logo.jpg" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -30,7 +42,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="color:#000000;">
 		<div class="container" style="font-size:20px;">
-			<a class="navbar-brand" href="index.html" style="font-size:32px;"><img src="images/logo.png" alt=""
+			<a class="navbar-brand" href="index.php" style="font-size:32px;"><img src="images/logo.jpg" alt=""
 					height="45px"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,6 +61,9 @@
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="faq.html">FAQ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="login.php">Logout</a>
 					</li>
 				</ul>
 			</div>
@@ -132,7 +147,7 @@
 					</div>
 					<div class="col-md-8">
 						<div class="card-body">
-							<h2 class="card-title">Oragnize your applications</h2>
+							<h2 class="card-title">Organize your applications</h2>
 							<p class="card-text">Often, it is important to be able to tailor your CV based on the job
 								you wish to apply for. With CV maker, you can create and manage several different CVs in
 								an organised way through your own personal account hub.</p>
@@ -156,29 +171,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container Form">
-		<h1>Contact Us</h1>
-		<div class="row">
-			<form class="row g-3">
-				<div class="col-md-6">
-					<label for="name" class="form-label">Name</label>
-					<input type="text" class="form-control" id="inputEmail4">
-				</div>
-				<div class="col-md-6">
-					<label for="inputEmail4" class="form-label">Email</label>
-					<input type="email" class="form-control" id="inputEmail4">
-				</div>
-				<div class="col-12">
-					<label for="inputAddress" class="form-label">Feedback</label>
-					<textarea type="text" class="form-control" row="5" id="inputAddress"
-						placeholder="Your Feedback"></textarea>
-				</div>
-				<div class="col-12">
-					<button type="submit" class="btn btn-primary">Submit</button>
-				</div>
-			</form>
-		</div>
-	</div>
+	
 	
 </body>
 <script>
