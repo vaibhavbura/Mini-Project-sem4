@@ -40,12 +40,9 @@ function generateCV(template) {
 
     document.getElementById('nav').style.display = 'none';
 
-    // document.body.style.zoom = "50%";
 
-    //  **********    **********  Image(Resume) Download/ PDF   **********    **********    **********
 
     document.querySelector('#dwnldimage').addEventListener('click', function () {
-        // let template2Image = document.getElementById(template).find('#target');
         let template2Image = $(`#${template}`).find('#target')[0];
         html2canvas(template2Image).then(function (canvas) {
             console.log(canvas);
@@ -53,16 +50,9 @@ function generateCV(template) {
         });
     });
 
-    // document.querySelector(`#${template} .printCv`).addEventListener('click', function(){
-    // document.querySelector(`#${template} .printCv`).removeEventListener('click',printer(template));
-    // document.querySelector(`#${template} .printCv`).addEventListener('click',printer(template));
-    // printer(template);
-    // });
-
-    //  **********    **********    **********    **********    **********
 
 
-    //  **********      Profile Image       *********
+
 
     let file = document.getElementById('inpImg').files[0];
     let reader = new FileReader();
@@ -71,11 +61,9 @@ function generateCV(template) {
         document.getElementById(`${template}`).getElementsByClassName('profilepic')[0].src = reader.result;
     };
 
-    //  **********    **********    **********    **********    **********
 
 
 
-    // ************************************ First Form *******************************
 
     let dob = new Date($('#dob').val());
     $(`#${template} #t_name`).html($('#fname').val() + " " + $('#lname').val());
@@ -99,14 +87,11 @@ function generateCV(template) {
         $(`#${template} #t_linkedIn`).html($('#linkedIn').val());
     }
 
-    //  **********    **********    **********    **********    **********
 
 
 
-    // ************************ Second form *************************
 
 
-    //  **********    Education    **********
 
     let edu_items = $('#accordionEdu .accordion-item').length;
     for (let i = 0; i < edu_items; i++) {
@@ -123,7 +108,6 @@ function generateCV(template) {
             end_date = end_date.getFullYear();
         }
         let school = $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .school`).val().trim();
-        // console.log(srt_date, end_date, degree, school);
 
         if (degree == "" || school == "" || srt_date == NaN || end_date == NaN) {
             continue;
@@ -152,7 +136,6 @@ function generateCV(template) {
     }
 
 
-    //  **********    Work    **********
 
     let work_items = $('#accordionWork .accordion-item').length;
 
@@ -202,7 +185,6 @@ function generateCV(template) {
         }
     }
 
-    //  **********    Skills    **********
 
     let skill_items = $('#accordionSkill .accordion-item').length;
     for (let i = 0; i < skill_items; i++) {
@@ -223,7 +205,6 @@ function generateCV(template) {
     }
 
 
-    //  **********    Interest    **********
 
     let interest_items = $('#accordionInt .accordion-item').length;
     for (let i = 0; i < interest_items; i++) {
@@ -245,9 +226,7 @@ function generateCV(template) {
         }
     }
 
-    // <li><span class="text">English</span></li>
 
-    //  **********    Languages    **********
 
     let lang_items = $('#accordionLang .accordion-item').length;
     for (let i = 0; i < lang_items; i++) {
@@ -269,9 +248,7 @@ function generateCV(template) {
     }
 
 
-    //  **********    Archievements    **********
 
-    // let achv = $(`#achv_description`).val().trim();
     let achv = $(`#achv_description`).val().replaceAll("\n", "<br />\r\n");
 
     if (achv !== "") {
@@ -286,9 +263,7 @@ function generateCV(template) {
     }
 
 
-    //  **********    **********    **********    **********    **********
 
-    // ******************* Profile *****************8**
 
     let profile = $(`#profile`).val().replaceAll("\n", "<br />\r\n");
     if (profile !== "") {
@@ -303,5 +278,4 @@ function generateCV(template) {
         }
     }
 
-    //  **********    **********    **********    **********    **********
 }

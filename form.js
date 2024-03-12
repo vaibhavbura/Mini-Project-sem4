@@ -61,15 +61,12 @@ function validate_chg_color(el) {
   return isValid;
 }
 
-//  **********    **********    **********    **********    **********
 
 
-//  **********    **********  Form - 1  Validation  **********    **********    **********
 
 function validate_form1(btn) {
   let finalValid = true;
   let isValid = true;
-  // console.log(document.getElementsByClassName('imgContainer')[0]);
   let img_div = document.getElementsByClassName('imgContainer')[0];
   if ($('#inpImg').val() == "") { validate_chg_color(img_div); isValid = false; finalValid = false; }
   $('#form1').find('select').each(function () {
@@ -83,16 +80,13 @@ function validate_form1(btn) {
     }
   });
   if (isValid == false) {
-    // btn.preventDefault();
   }
   return finalValid;
 }
 
-//  **********    **********    **********    **********    **********
 
 
 
-//  **********  ********** Work Experience  **********  **********
 
 function updateWork() {
   for (let i = 0; i < $('#accordionWork .accordion-item').length; i++) {
@@ -152,29 +146,7 @@ $("#add_work").click(function (e) {
   }
 });
 
-// $(".fc2").mouseleave(function () {
-//   if (work == 0) { return; }
-//   let timer = window.setTimeout(function () {
-//     wmakeVisible();
-//     let count = $("#accordionWork .accordion-item").length;
-//     for (let i = 0; i < count; i++) {
-//       if (document.getElementById("accordionWork").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")) {
-//         document.getElementById("accordionWork").getElementsByClassName("accordion-button")[i].click();
-//       }
-//     }
-//   }, 5000);
-//   $(".fc2").mouseenter(function () {
-//     window.clearTimeout(timer);
-//     $(".fc2").unbind('mouseenter');
-//   });
-// });
 
-//  **********    **********    **********    **********    **********
-
-
-
-
-//  **********  ********** Education and Qualifications **********  **********
 
 function updateEdu() {
   for (let i = 0; i < $('#accordionEdu .accordion-item').length; i++) {
@@ -237,29 +209,7 @@ $("#add_edu").click(function (e) {
   }
 });
 
-// $(".fc1").mouseleave(function () {
-//   if (edu == 0) { return; }
-//   let timer = window.setTimeout(function () {
-//     emakeVisible();
-//     let count = $("#accordionEdu .accordion-item").length;
-//     for (let i = 0; i < count; i++) {
-//       if (document.getElementById("accordionEdu").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")) {
-//         document.getElementById("accordionEdu").getElementsByClassName("accordion-button")[i].click();
-//       }
-//     }
-//   }, 5000);
-//   $(".fc1").mouseenter(function () {
-//     window.clearTimeout(timer);
-//     $(".fc1").unbind('mouseenter');
-//   });
-// });
 
-//  **********    **********    **********    **********    **********
-
-
-
-
-//  **********  ********** Skills **********  **********
 
 function updateSkill() {
   for (let i = 0; i < $('#accordionSkill .accordion-item').length; i++) {
@@ -334,12 +284,10 @@ $(".fc3").mouseleave(function () {
   });
 });
 
-//  **********    **********    **********    **********    **********
 
 
 
 
-//  **********  ********** Interests  **********  **********
 
 function updateInterest() {
   for (let i = 0; i < $('#accordionInt .accordion-item').length; i++) {
@@ -414,9 +362,7 @@ $(".fc4").mouseleave(function () {
   });
 });
 
-//  **********    **********    **********    **********    **********
 
-// ********************** *********************** Languages ********************* ************************
 
 function updateLang() {
   for (let i = 0; i < $('#accordionLang .accordion-item').length; i++) {
@@ -474,32 +420,7 @@ $("#add_lang").click(function (e) {
   }
 });
 
-// $(".fc6").mouseleave(function () {
-//   if (lang == 0) { return; }
-//   let timer = window.setTimeout(function () {
-//     lmakeVisible();
-//     let count = $("#accordionLang .accordion-item").length;
-//     for (let i = 0; i < count; i++) {
-//       if (document.getElementById("accordionLang").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")) {
-//         document.getElementById("accordionLang").getElementsByClassName("accordion-button")[i].click();
-//       }
-//     }
-//   }, 5000);
-//   $(".fc6").mouseenter(function () {
-//     window.clearTimeout(timer);
-//     $(".fc6").unbind('mouseenter');
-//   });
-// });
 
-
-// ********************** *********************** ********************* ************************
-
-// if ($('#form1').find('#fname').val().trim() == '' || $('#form1').find('#lname').val().trim() == '' || $('#form1').find('#email').val().trim() == '' || $('#form1').find('#cnumber').val().trim() == '' || $('#form1').find('#address').val().trim() == '' || $('#form1').find('#city').val().trim() == '' || $('#form1').find('#state').val().trim() == '' || $('#form1').find('#zip').val().trim() == '' || $('#form1').find('#gender').val().trim() == '' || $('#form1').find('#bdate').val().trim() == '') {
-
-// }
-
-
-//  **********    **********    Country, state and city API   **********    **********
 
 let auth_token;
 $('#country').click(function () {
@@ -584,7 +505,6 @@ function getCities() {
   })
 }
 
-//  **********    **********    Profile Images    **********    **********
 
 $('.imgContainer').click(function () {
   $('#inpImg').click();
@@ -602,7 +522,6 @@ $('#inpImg').change(function () {
     reader.readAsDataURL(file);
   }
   else {
-    // validate_chg_color(this);
     document.getElementById('previewText').style.display = null;
     document.getElementById('image').style.display = null;
     document.getElementsByClassName('imgContainer')[0].style.border = null;
@@ -610,19 +529,15 @@ $('#inpImg').change(function () {
   }
 })
 
-//  **********    **********    **********    **********    **********
 
 
 
-//  **********    **********    Genrating CV    **********    **********
 
 
 function templateRadioSelector(ele) {
   for (let i = 0; i < $('#form3 .card').length; i++) {
-    // $(`#form3 .card:nth-child(${i+1})`).css('border','1px solid rgba(0,0,0,.125)');
     $(`#form3 .card:nth-child(${i + 1})`).css('background-color', 'white');
   }
-  // $(ele).css('border', '10px solid green');
   $(ele).css('background-color', '#80808088');
   $(ele).find('input').prop('checked', true);
 }
