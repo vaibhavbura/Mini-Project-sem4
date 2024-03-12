@@ -1,3 +1,15 @@
+<?php
+session_start();
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +42,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="color:#000000;">
 		<div class="container" style="font-size:20px;">
-			<a class="navbar-brand" href="index.html" style="font-size:32px;"><img src="images/logo.jpg" alt=""
+			<a class="navbar-brand" href="index.php" style="font-size:32px;"><img src="images/logo.jpg" alt=""
 					height="45px"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +63,7 @@
 						<a class="nav-link" href="faq.html">FAQ</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="login.html">Logout</a>
+						<a class="nav-link" href="login.php">Logout</a>
 					</li>
 				</ul>
 			</div>
